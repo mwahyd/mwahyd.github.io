@@ -1,0 +1,112 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  line-height: 1.5;
+  font-size: 1.3125;
+  font-family: system-ui;
+  background-color: #05172d;
+  color: #fff;
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
+}
+
+ul,
+li {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.container {
+  /* border: 2px solid purple; */
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.section-title {
+  /* border: 2px solid palevioletred; */
+  margin: 0;
+  font-size: 1.6rem;
+}
+
+section {
+  padding: 2em 0;
+}
+
+/* * HERO SECTION */
+
+.hero {
+  /* border: 2px solid yellow; */
+  padding: 3em 0 6em;
+  height: 100svh;
+}
+
+.hero__title {
+  margin: 0;
+  font-size: 2.6rem;
+  color: #fff;
+  line-height: 1.2;
+}
+
+.hero__subtitle {
+  font-size: 1.4rem;
+  opacity: 0.9;
+  margin-top: 1rem;
+  margin-bottom: 3rem;
+}
+
+.hero__headline {
+  margin-bottom: 6rem;
+}
+
+.socials__list {
+  display: flex;
+  gap: 1rem;
+}
+
+/* * SECTION ONE - ABOUT */
+
+.section-one--btn {
+  margin-top: 1.5rem;
+}
+
+/* * SECTION TWO - SKILLS */
+
+.section-two__cards {
+  border: 2px solid pink;
+}
+
+/* * UTLITY CLASSES */
+
+.dim-text {
+  opacity: 0.5;
+}
+
+.s-box {
+  width: 30px;
+  height: 30px;
+}
+
+.row {
+  display: flex;
+}
+
+.cta {
+  display: inline-block;
+  border: 1px solid #fff;
+  color: #fff;
+  border-radius: 100px;
+  background: transparent;
+  padding: 0.75em 2em;
+  font-size: 1rem;
+  cursor: pointer;
+}

@@ -30,7 +30,6 @@ img {
 }
 
 .container {
-  /* border: 2px solid purple; */
   width: 90%;
   max-width: 1200px;
   margin: 0 auto;
@@ -142,6 +141,7 @@ svg {
 /* * SECTION FOUR - Contact */
 
 .section-four {
+  margin-top: -1.5rem;
 }
 
 input,

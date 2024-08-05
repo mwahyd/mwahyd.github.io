@@ -181,6 +181,15 @@ label {
   width: 100%;
 }
 
+.arrow {
+  text-align: end;
+  margin: -3rem 0;
+}
+
+.to-top-arrow {
+  font-size: 2rem;
+}
+
 /* * UTLITY CLASSES */
 
 .dim-text {

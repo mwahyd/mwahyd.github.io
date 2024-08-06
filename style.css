@@ -190,6 +190,10 @@ textarea {
   transition: visibility 150ms ease-in;
 }
 
+.error {
+  outline: 2px solid #c0271d;
+}
+
 .error-text[visible] {
   visibility: visible;
 }

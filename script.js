@@ -16,13 +16,9 @@ const portfolio = (function () {
   getInTouchBtn.addEventListener("click", scrollToContacts);
   sendMessage.addEventListener("click", onSendClicked);
   inputs.forEach((input) =>
-    input.addEventListener(
-      "keyup",
-      (ev) => {
-        removeError(input);
-      },
-      { once: true }
-    )
+    input.addEventListener("keyup", (ev) => {
+      removeError(input);
+    })
   );
 
   // handler functions
@@ -84,11 +80,14 @@ const portfolio = (function () {
 
   function showError(errorDiv) {
     errorDiv.setAttribute("visible", "");
+    errorDiv.previousElementSibling.classList.add("error");
   }
 
   function removeError(input) {
-    if (input.nextElementSibling.hasAttribute("visible")) {
-      input.nextElementSibling.removeAttribute("visible");
+    const errorDiv = input.nextElementSibling;
+    if (errorDiv.hasAttribute("visible")) {
+      errorDiv.removeAttribute("visible");
+      input.classList.remove("error");
     }
   }
 
@@ -99,10 +98,16 @@ const portfolio = (function () {
     return formObj;
   }
 
-  function sendMail(formData) {
-    // emailjs.init({ publicKey: "3_vbJ8AfiDmEixZkD" });
-    console.log(formData);
+  function sendMail({ name, email, message }) {
+    console.log(name, email, message);
+    emailjs.init({ publicKey: "3_vbJ8AfiDmEixZkD" });
+    const params = { name, email, message };
+    emailjs.send("service_dz06ytp", "template_fmm1zy9", params).then(
+      Swal.fire({
+        title: "Success!",
+        text: "Message sent",
+        icon: "success",
+      })
+    );
   }
-
-  // support functions
 })();

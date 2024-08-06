@@ -33,6 +33,7 @@ img {
   width: 90%;
   max-width: 1200px;
   margin: 0 auto;
+  position: relative;
 }
 
 .section-title {
@@ -172,22 +173,47 @@ input:nth-of-type(2) {
 
 label {
   display: block;
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   margin-bottom: 0.5rem;
 }
 
 .contact__btn.contact__btn {
-  margin: 3rem 0;
+  margin: 3rem 0 1.5rem;
   width: 100%;
 }
 
-.arrow {
-  text-align: end;
-  margin: -3rem 0;
+.to-top-arrow {
+  display: inline-block;
+  position: absolute;
+  right: 0;
+  bottom: -1rem;
+  padding: 0;
+  border: 0;
+  background-color: transparent;
+  color: #fff;
+  font-size: 1.7rem;
+  cursor: pointer;
+  transition: opacity 150ms linear;
 }
 
-.to-top-arrow {
-  font-size: 2rem;
+.to-top-arrow:hover {
+  opacity: 1;
+}
+
+.to-top-arrow[scrolling] {
+  position: fixed;
+  bottom: 1rem;
+  right: 1rem;
+  animation: fade-out 1100ms forwards;
+}
+
+@keyframes fade-out {
+  100% {
+    opacity: 0;
+  }
+  0% {
+    opacity: 1;
+  }
 }
 
 /* * UTLITY CLASSES */
@@ -214,4 +240,14 @@ label {
   padding: 0.75em 2em;
   font-size: 1rem;
   cursor: pointer;
+  transition: all 200ms ease-in-out;
+  font-weight: 800;
+}
+
+.cta:hover {
+  background-color: rgba(255, 255, 255, 1);
+  color: #020c19;
+  opacity: 1;
+  box-shadow: 20px 20px 20px rgba(255, 255, 255, 0.3);
+  scale: 1.05;
 }

@@ -151,6 +151,11 @@ svg {
   margin-top: -1.5rem;
 }
 
+/* .form {
+  border: 2px solid red;
+  position: relative;
+} */
+
 input,
 textarea {
   display: block;
@@ -158,9 +163,12 @@ textarea {
   padding: 0.5em 1em;
   background-color: transparent;
   border: 0;
-  outline: 2px solid white;
+  border-radius: 6px;
+  outline: 2px solid #6b6b6b;
   font-size: 1.2rem;
   color: #fff;
+  transition: outline 150ms linear;
+  margin: 0.3rem 0 1.5rem;
 }
 
 input {
@@ -172,19 +180,34 @@ textarea {
   overflow: auto;
 }
 
-input:nth-of-type(1),
-input:nth-of-type(2) {
-  margin-bottom: 2rem;
+.error-text {
+  visibility: hidden;
+  font-size: 0.9rem;
+  color: #c0271d;
+  position: absolute;
+  right: 0;
+  top: 0;
+  transition: visibility 150ms ease-in;
+}
+
+.error-text[visible] {
+  visibility: visible;
+}
+
+input:focus,
+textarea:focus {
+  outline: 2px solid #cdcdcd;
 }
 
 label {
   display: block;
   font-size: 1.1rem;
   margin-bottom: 0.5rem;
+  position: relative;
 }
 
 .contact__btn.contact__btn {
-  margin: 3rem 0 1.5rem;
+  margin: 1.5rem 0;
   width: 100%;
 }
 

@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./style.css" />
     <link rel="icon" type="image/x-icon" href="./assets/favicon.ico" />
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
     <script src="./script.js" defer></script>
     <title>MW</title>
   </head>
@@ -66,7 +69,7 @@
       </div>
     </section>
 
-    <section class="section-one">
+    <section class="section-one" id="section-one">
       <div class="container">
         <h2 class="section-title" id="about">
           <a href="#about">About</a>
@@ -85,7 +88,7 @@
           offers a highly satisfying experience through thoughtful design and
           engineering.
         </p>
-        <a href="#contact" class="cta section-one--btn">Get In Touch</a>
+        <btn class="cta section-one--btn" id="to-contacts">Get In Touch</btn>
       </div>
     </section>
 
@@ -624,10 +627,12 @@
         </h2>
         <div class="projects">
           <div class="project">
-            <img
-              src="./assets/project1.png"
-              alt="Portfolio page thumbnail"
-              class="project__img" />
+            <a href="/">
+              <img
+                src="./assets/project1.png"
+                alt="Portfolio page thumbnail"
+                class="project__img" />
+            </a>
             <h3 class="project__title">Portfolio Website</h3>
             <div class="project__data">
               <span class="project__year">2024</span>
@@ -640,10 +645,14 @@
           </div>
 
           <div class="project">
-            <img
-              src="./assets/landing.png"
-              alt="landing page thumbnail"
-              class="project__img" />
+            <a
+              href="https://mwahyd.github.io/TOP-projects/17-responsive-layouts/responsive-layouts/landing-page/"
+              target="_blank">
+              <img
+                src="./assets/landing.png"
+                alt="landing page thumbnail"
+                class="project__img" />
+            </a>
             <h3 class="project__title">Landing Page Demo</h3>
             <div class="project__data">
               <span class="project__year">2024</span>
@@ -656,10 +665,14 @@
           </div>
 
           <div class="project">
-            <img
-              src="./assets/project2.png"
-              alt="tic-tac-toe thumbnail"
-              class="project__img" />
+            <a
+              href="https://mwahyd.github.io/TOP-projects/091-tic-tac-toe/"
+              target="_blank">
+              <img
+                src="./assets/project2.png"
+                alt="tic-tac-toe thumbnail"
+                class="project__img" />
+            </a>
             <h3 class="project__title">Unbeatable Tic Tac Toe</h3>
             <div class="project__data">
               <span class="project__year">2024</span>
@@ -672,10 +685,12 @@
           </div>
 
           <div class="project">
-            <img
-              src="./assets/project3.png"
-              alt="Weather app thumbnail"
-              class="project__img" />
+            <a href="https://mwahyd.github.io/weather/" target="_blank">
+              <img
+                src="./assets/project3.png"
+                alt="Weather app thumbnail"
+                class="project__img" />
+            </a>
             <h3 class="project__title">Weather App</h3>
             <div class="project__data">
               <span class="project__year">2023</span>
@@ -689,10 +704,12 @@
           </div>
 
           <div class="project">
-            <img
-              src="./assets/project4.png"
-              alt="Reminders app thumbnail"
-              class="project__img" />
+            <a href="https://mwahyd.github.io/reminders/" target="_blank">
+              <img
+                src="./assets/project4.png"
+                alt="Reminders app thumbnail"
+                class="project__img" />
+            </a>
             <h3 class="project__title">Reminders App</h3>
             <div class="project__data">
               <span class="project__year">2023</span>
@@ -714,14 +731,31 @@
           <a href="#contact">Get In Touch</a>
         </h2>
         <p class="dim-text">Lets bring your awesome idea to life!</p>
-        <form action="#">
-          <label class="dim-text" for="name">NAME</label>
-          <input type="text" id="name" name="name" autocomplete="nope" />
-          <label class="dim-text" for="email">EMAIL</label>
-          <input type="email" id="email" name="email" autocomplete="nope" />
-          <label class="dim-text" for="message">MESSAGE</label>
-          <textarea name="message" id="message" rows="7"></textarea>
-          <button type="submit" class="cta contact__btn">Send</button>
+        <form action="#" class="form" id="form">
+          <label for="name">
+            <span class="dim-text">NAME</span>
+            <input required type="text" id="name" name="name" autocomplete="nope" />
+            <div class="error-text" id="error">Field Cannot Be Blank</div>
+          </label>
+
+          <label for="email">
+            <span class="dim-text">EMAIL</span>
+            <input
+              required
+              type="email"
+              id="email"
+              name="email"
+              autocomplete="nope" />
+            <div class="error-text" id="error2">Enter A Valid Email</div>
+          </label>
+
+          <label for="message">
+            <span class="dim-text">MESSAGE</span>
+            <textarea required name="message" id="message" rows="7"></textarea>
+            <div class="error-text" id="error3">Field Cannot Be Blank</div>
+          </label>
+
+          <button type="submit" class="cta contact__btn" id="send-msg">Send</button>
         </form>
         <button class="to-top-arrow dim-text" id="to-top-arrow">&#8593;</button>
       </div>

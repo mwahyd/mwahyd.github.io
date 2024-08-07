@@ -10,16 +10,19 @@ const portfolio = (function () {
   const contactsHeader = contactsSection.querySelector("#contact");
   const sendMessage = contactsSection.querySelector("#send-msg");
   const inputs = contactsSection.querySelectorAll("input, textarea");
+  const projects = portfolioSection.querySelectorAll("#project");
 
   // bind events
   toTopArrow.addEventListener("click", scrollToTop);
   getInTouchBtn.addEventListener("click", scrollToContacts);
   sendMessage.addEventListener("click", onSendClicked);
   inputs.forEach((input) =>
-    input.addEventListener("keyup", (ev) => {
-      removeError(input);
-    })
+    input.addEventListener("keyup", (ev) => removeError(input))
   );
+  projects.forEach((project) => {
+    project.addEventListener("mouseenter", handleMouseOver);
+    project.addEventListener("mouseleave", handleMouseLeave);
+  });
 
   // handler functions
   function scrollToTop(ev) {
@@ -45,6 +48,21 @@ const portfolio = (function () {
       sendMail(formData);
     }
   }
+
+  function handleMouseOver(ev) {
+    projects.forEach((project) => {
+      project.classList.toggle("highlight", ev.target === project);
+      project.classList.toggle("dim", ev.target !== project);
+    });
+  }
+
+  function handleMouseLeave() {
+    portfolioSection.querySelectorAll(".highlight, .dim").forEach((item) => {
+      item.classList.remove("highlight", "dim");
+    });
+  }
+
+  // support functions
 
   function checkInputs() {
     const form = contactsSection.querySelector("#form");
@@ -99,7 +117,6 @@ const portfolio = (function () {
   }
 
   function sendMail({ name, email, message }) {
-    console.log(name, email, message);
     emailjs.init({ publicKey: "3_vbJ8AfiDmEixZkD" });
     const params = { name, email, message };
     emailjs.send("service_dz06ytp", "template_fmm1zy9", params).then(

@@ -124,14 +124,13 @@ svg {
 /* * SECTION TWO - SKILLS */
 
 .section-two__cards {
-  /* border: 2px solid pink; */
   font-size: 1.3rem;
   font-weight: 700;
 }
 
 .card {
   border: 2px solid white;
-  padding: 2em 0;
+  padding: 1em 0;
   text-align: center;
 }
 
@@ -362,9 +361,41 @@ label {
     /* border: 2px solid red; */
     margin-top: 0;
   }
+
+  /* * Skills */
+
+  .card {
+    width: 70%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    padding: 1em;
+  }
+
+  .card > p {
+    flex: 1;
+  }
+
+  svg {
+    width: 70px;
+  }
+
+  /* * Portfolio */
+
+  img {
+    max-width: 250px;
+  }
 }
 
 @media (min-width: 640px) {
+  .container {
+    width: 80%;
+  }
+
+  section:not(section.hero) {
+    padding: 4em 0;
+  }
+
   /* * Section - Hero */
 
   .hero__title {
@@ -379,8 +410,12 @@ label {
 
   .section-two__cards {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 2rem;
+  }
+
+  .card {
+    display: block;
   }
 
   .card + .card {
@@ -388,10 +423,6 @@ label {
   }
 
   /* * Section - Portfolio */
-
-  .projects {
-    margin-bottom: 1.5rem;
-  }
 
   .project {
     padding: 1.5em;

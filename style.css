@@ -58,10 +58,14 @@ img {
 }
 
 .section-title {
-  /* border: 2px solid palevioletred; */
   margin: 0;
   font-size: 2.2rem;
   margin-bottom: 2rem;
+  position: -webkit-sticky; /* Safari */
+  position: sticky;
+  top: 0;
+  z-index: 3;
+  background-color: #05172d;
 }
 
 section {
@@ -86,10 +90,6 @@ svg {
   flex-direction: column;
   justify-content: center;
 }
-
-/* .hero__text {
-  border: 2px solid green;
-} */
 
 .hero__title {
   margin: 0;

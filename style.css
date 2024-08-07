@@ -183,11 +183,6 @@ svg {
   margin-top: -1.5rem;
 }
 
-/* .form {
-  border: 2px solid red;
-  position: relative;
-} */
-
 input,
 textarea {
   display: block;
@@ -313,16 +308,9 @@ label {
   background-color: rgba(255, 255, 255, 1);
   color: #020c19;
   opacity: 1;
-  box-shadow: 20px 20px 20px rgba(255, 255, 255, 0.3);
+  box-shadow: 10px 10px 20px rgba(255, 255, 255, 0.3);
   scale: 1.05;
 }
-
-/* .shadow:hover {
-  background: #05172d;
-  border-radius: 15px;
-  box-shadow: -15px -15px 15px rgba(255, 255, 255, 0.2),
-    15px 15px 15px rgba(0, 0, 0, 0.1);
-} */
 
 /* * Scroll Bar */
 
@@ -365,15 +353,16 @@ label {
   /* * Skills */
 
   .card {
-    width: 70%;
+    width: 60%;
     margin: 0 auto;
     display: flex;
-    justify-content: space-between;
-    padding: 1em;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 1em 0.5em;
   }
 
   .card > p {
-    flex: 1;
+    /* flex: 1; */
   }
 
   svg {
@@ -408,14 +397,26 @@ label {
 
   /* * Section - Skills */
 
+  .card {
+    display: block;
+    width: 65%;
+    padding: 1em 0;
+    margin: 0;
+  }
+
+  .card > p {
+    width: fit-content;
+    margin: 0 auto;
+  }
+
   .section-two__cards {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 2rem;
+    gap: 3rem;
   }
 
-  .card {
-    display: block;
+  .card:nth-of-type(odd) {
+    justify-self: end;
   }
 
   .card + .card {

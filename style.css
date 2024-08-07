@@ -174,6 +174,7 @@ svg {
 }
 
 .project__info {
+  /* border: 2px solid yellow; */
   margin: 1.5rem 0;
 }
 
@@ -317,6 +318,15 @@ label {
   scale: 1.05;
 }
 
+/* .shadow:hover {
+  background: #05172d;
+  border-radius: 15px;
+  box-shadow: -15px -15px 15px rgba(255, 255, 255, 0.2),
+    15px 15px 15px rgba(0, 0, 0, 0.1);
+} */
+
+/* * Scroll Bar */
+
 ::-webkit-scrollbar {
   width: 16px;
 }
@@ -335,6 +345,8 @@ label {
 ::-webkit-scrollbar-thumb:hover {
   background-color: #fff;
 }
+
+/* * Media Queries */
 
 @media (min-width: 425px) {
   /* * Section - HERO */
@@ -378,12 +390,50 @@ label {
   /* * Section - Portfolio */
 
   .projects {
-    border: 2px solid red;
+    margin-bottom: 1.5rem;
   }
 
   .project {
-    border: 2px solid yellow;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+    padding: 1.5em;
+    display: flex;
+    transition: background-color 100ms ease-in-out;
+  }
+
+  .project > .col:first-child {
+    width: 32%;
+
+    align-self: start;
+  }
+
+  .project > .col:last-child {
+    width: 60%;
+    margin-left: auto;
+  }
+
+  .project img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+  }
+
+  .img1 {
+    object-position: 100% 0%;
+  }
+
+  .project__title {
+    margin-top: 0;
+  }
+
+  .project__info {
+    margin: 1.5rem 0 0;
+  }
+
+  /* * Utility classes */
+
+  .highlight:hover {
+    opacity: 1;
+    background-color: rgba(7, 32, 62, 0.478);
+    border-radius: 10px;
+    box-shadow: 0 -2px 10px rgba(255, 255, 255, 0.1);
   }
 }

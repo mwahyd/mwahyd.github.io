@@ -5,6 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./style.css" />
     <link rel="icon" type="image/x-icon" href="./assets/favicon.ico" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+      rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+      rel="stylesheet" />
     <script
       type="text/javascript"
       src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
@@ -51,7 +61,7 @@
                 <li class="socials__item">
                   <a
                     class="socials__link"
-                    href="https://linkedin.com/in/maishan-w"
+                    href="https://www.linkedin.com/in/maishanw"
                     target="_blank"
                     title="LinkedIn">
                     <svg
@@ -76,10 +86,10 @@
       <main>
         <section class="section-one" id="section-one">
           <div class="container">
-            <h2 class="section-title block" id="about">
+            <h2 class="section-title header-fade-in" id="about">
               <a href="#about">About</a>
             </h2>
-            <p class="dim-text block">
+            <p class="dim-text fade-in">
               I have always been curious about web applications and eager to
               understand how the things we interact with online are created. In 2022,
               I devised a roadmap and created a curriculum to teach myself web
@@ -87,26 +97,26 @@
               successfully executed various web projects, ranging from landing pages
               to complex web applications.
             </p>
-            <p class="dim-text block">
+            <p class="dim-text fade-in">
               I find the greatest satisfaction in building applications where logic
               and design work seamlessly together. I believe this comes from my habit
               of putting myself in the user's shoes, ensuring that the software I
               create offers a highly satisfying experience through thoughtful design
               and engineering.
             </p>
-            <btn class="cta section-one--btn block" id="to-contacts"
-              >Get In Touch</btn
-            >
+            <btn class="cta section-one--btn fade-in" id="to-contacts">
+              Get In Touch
+            </btn>
           </div>
         </section>
 
         <section class="section-two">
           <div class="container">
-            <h2 class="section-title block" id="skills">
+            <h2 class="section-title header-fade-in" id="skills">
               <a href="#skills">Skills</a>
             </h2>
             <div class="section-two__cards">
-              <div class="card block">
+              <div class="card fade-in">
                 <svg
                   viewBox="0 0 24 24"
                   fill="none"
@@ -129,7 +139,7 @@
                 <p>Development</p>
               </div>
 
-              <div class="card block">
+              <div class="card fade-in">
                 <svg
                   viewBox="0 0 32 32"
                   xmlns="http://www.w3.org/2000/svg"
@@ -158,7 +168,7 @@
                 </p>
               </div>
 
-              <div class="card block">
+              <div class="card fade-in">
                 <svg
                   fill="#ffffff"
                   viewBox="0 0 48 48"
@@ -213,7 +223,7 @@
                 <p>Analytics</p>
               </div>
 
-              <div class="card block">
+              <div class="card fade-in">
                 <svg
                   width="50px"
                   height="50px"
@@ -249,7 +259,7 @@
                 </p>
               </div>
 
-              <div class="card block">
+              <div class="card fade-in">
                 <svg
                   width="50px"
                   height="50px"
@@ -298,7 +308,7 @@
                 <p>Research</p>
               </div>
 
-              <div class="card block">
+              <div class="card fade-in">
                 <svg
                   width="50px"
                   height="50px"
@@ -630,10 +640,8 @@
                     </g>
                   </g>
                 </svg>
-                <p>
-                  Digital<br />
-                  Marketing
-                </p>
+
+                <p>SEO</p>
               </div>
             </div>
           </div>
@@ -641,7 +649,7 @@
 
         <section class="section-three" id="section-three">
           <div class="container">
-            <h2 class="section-title block" id="portfolio">
+            <h2 class="section-title header-fade-in" id="portfolio" portfolio>
               <a href="#portfolio">Portfolio</a>
             </h2>
             <div class="projects">
@@ -650,15 +658,17 @@
                   <!-- <img
                 src="./assets/project1.png"
                 alt="Portfolio page thumbnail"
-                class="project__img img1 block" /> -->
+                class="project__img img1 fade-in" /> -->
                   <picture>
                     <source
                       media="(max-width: 425px)"
                       srcset="./assets/project1.png" />
-                    <img class="project__img block" src="./assets/project1-h.png" />
+                    <img
+                      class="project__img fade-in"
+                      src="./assets/project1-h.png" />
                   </picture>
                 </a>
-                <div class="col block">
+                <div class="col fade-in">
                   <h3 class="project__title">Portfolio Website</h3>
                   <div class="project__data">
                     <span class="project__year dim-text">2024</span>
@@ -680,15 +690,17 @@
                   <!-- <img
                 src="./assets/landing.png"
                 alt="landing page thumbnail"
-                class="project__img block" /> -->
+                class="project__img fade-in" /> -->
                   <picture>
                     <source
                       media="(max-width: 425px)"
                       srcset="./assets/landing.png" />
-                    <img class="project__img block" src="./assets/project2-h.png" />
+                    <img
+                      class="project__img fade-in"
+                      src="./assets/project2-h.png" />
                   </picture>
                 </a>
-                <div class="col block">
+                <div class="col fade-in">
                   <h3 class="project__title">Landing Page Demo</h3>
                   <div class="project__data">
                     <span class="project__year dim-text">2024</span>
@@ -710,15 +722,17 @@
                   <!-- <img
                 src="./assets/project2.png"
                 alt="tic-tac-toe thumbnail"
-                class="project__img block" /> -->
+                class="project__img fade-in" /> -->
                   <picture>
                     <source
                       media="(max-width: 425px)"
                       srcset="./assets/project2.png" />
-                    <img class="project__img block" src="./assets/project3-h.png" />
+                    <img
+                      class="project__img fade-in"
+                      src="./assets/project3-h.png" />
                   </picture>
                 </a>
-                <div class="col block">
+                <div class="col fade-in">
                   <h3 class="project__title">Unbeatable Tic Tac Toe</h3>
                   <div class="project__data">
                     <span class="project__year dim-text">2024</span>
@@ -740,15 +754,17 @@
                   <!-- <img
                 src="./assets/project3.png"
                 alt="Weather app thumbnail"
-                class="project__img block" /> -->
+                class="project__img fade-in" /> -->
                   <picture>
                     <source
                       media="(max-width: 425px)"
                       srcset="./assets/project3.png" />
-                    <img class="project__img block" src="./assets/project4-h.png" />
+                    <img
+                      class="project__img fade-in"
+                      src="./assets/project4-h.png" />
                   </picture>
                 </a>
-                <div class="col block">
+                <div class="col fade-in">
                   <h3 class="project__title">Weather App</h3>
                   <div class="project__data">
                     <span class="project__year dim-text">2023</span>
@@ -770,15 +786,17 @@
                   <!-- <img
                 src="./assets/project4a.png"
                 alt="Reminders app thumbnail"
-                class="project__img block" /> -->
+                class="project__img fade-in" /> -->
                   <picture>
                     <source
                       media="(max-width: 425px)"
                       srcset="./assets/project4a.png" />
-                    <img class="project__img block" src="./assets/project5-h.png" />
+                    <img
+                      class="project__img fade-in"
+                      src="./assets/project5-h.png" />
                   </picture>
                 </a>
-                <div class="col block">
+                <div class="col fade-in">
                   <h3 class="project__title">Reminders</h3>
                   <div class="project__data">
                     <span class="project__year dim-text">2023</span>
@@ -801,15 +819,17 @@
                   <!-- <img
                 src="./assets/project5.png"
                 alt="Calculator app thumbnail"
-                class="project__img block" /> -->
+                class="project__img fade-in" /> -->
                   <picture>
                     <source
                       media="(max-width: 425px)"
                       srcset="./assets/project5.png" />
-                    <img class="project__img block" src="./assets/project6-h.png" />
+                    <img
+                      class="project__img fade-in"
+                      src="./assets/project6-h.png" />
                   </picture>
                 </a>
-                <div class="col block">
+                <div class="col fade-in">
                   <h3 class="project__title">Calculator</h3>
                   <div class="project__data">
                     <span class="project__year dim-text">2023</span>
@@ -829,11 +849,11 @@
 
         <section class="section-four" id="section-four">
           <div class="container">
-            <h2 class="section-title block" id="contact">
+            <h2 class="section-title header-fade-in" id="contact">
               <a href="#contact">Get In Touch</a>
             </h2>
-            <p class="dim-text block">Lets bring your awesome idea to life!</p>
-            <form action="#" class="form block" id="form">
+            <p class="dim-text fade-in">Lets bring your awesome idea to life!</p>
+            <form action="#" class="form fade-in" id="form">
               <label for="name">
                 <span class="dim-text">NAME</span>
                 <input

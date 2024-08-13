@@ -187,6 +187,10 @@ svg {
   margin-top: -1.5rem;
 }
 
+form {
+  padding: 0 0.5rem;
+}
+
 input,
 textarea {
   display: block;

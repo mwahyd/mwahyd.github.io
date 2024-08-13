@@ -27,7 +27,6 @@ const portfolio = (function () {
   // handler functions
   function scrollToTop(ev) {
     const btn = ev.target;
-    console.log(btn);
     btn.setAttribute("scrolling", "");
     window.scroll({ top: 0, behavior: "smooth" });
     btn.addEventListener("animationend", () => btn.removeAttribute("scrolling"), {

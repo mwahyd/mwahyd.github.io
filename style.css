@@ -502,6 +502,18 @@ label {
     text-align: left;
   }
 
+  .hero__title {
+    font-size: 3.375rem;
+  }
+
+  .hero__subtitle {
+    font-size: 1.575rem;
+  }
+
+  .hero__headline {
+    font-size: 1.266rem;
+  }
+
   /* * Section - contacts */
 
   .to-top-arrow {

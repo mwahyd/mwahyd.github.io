@@ -161,9 +161,12 @@ svg {
 }
 
 .project__img {
+  display: block;
   border: 5px solid rgba(255, 255, 255, 0.1);
-  padding: 1rem;
   transition: border 150ms ease-in-out;
+  padding: 1rem;
+  width: 60%;
+  margin: 0 auto;
 }
 
 .project__img:hover {
@@ -249,7 +252,7 @@ label {
 }
 
 .contact__btn.contact__btn {
-  margin: 1.5rem 0;
+  margin: 1.5rem 0 3rem;
   width: 100%;
 }
 
@@ -375,8 +378,8 @@ label {
 
   /* * Portfolio */
 
-  img {
-    max-width: 350px;
+  .project__img {
+    max-width: 200px;
   }
 }
 
@@ -444,8 +447,9 @@ label {
     margin-left: auto;
   }
 
-  img {
-    max-width: 100%;
+  .project__img {
+    width: 100%;
+    padding: 0.5rem;
   }
 
   .project__title {
@@ -457,6 +461,10 @@ label {
   }
 
   /* * Section - contacts */
+
+  .contact__btn.contact__btn {
+    margin: 1.5rem 0;
+  }
 
   .to-top-arrow {
     right: 10%;

@@ -60,7 +60,7 @@ img {
 @keyframes appear {
   from {
     opacity: 0;
-    scale: 0.8;
+    scale: 0.6;
   }
   to {
     opacity: 1;
@@ -84,8 +84,8 @@ section {
 }
 
 svg {
-  width: 100px;
-  height: 100px;
+  width: 50px;
+  height: 50px;
 }
 
 /* * HERO SECTION */
@@ -135,16 +135,23 @@ svg {
 .section-two__cards {
   font-size: 1.3rem;
   font-weight: 700;
+  padding: 0 2em;
 }
 
 .card {
   border: 2px solid white;
-  padding: 1em 0;
+  padding: 0.5em 0;
   text-align: center;
 }
 
 .card + .card {
-  margin-top: 2rem;
+  margin-top: 3rem;
+}
+
+.card > p {
+  margin: 0;
+  margin-top: 0.3rem;
+  line-height: 1;
 }
 
 /* * SECTION THREE - Portfolio */
@@ -182,10 +189,6 @@ svg {
 }
 
 /* * SECTION FOUR - Contact */
-
-.section-four {
-  margin-top: -1.5rem;
-}
 
 form {
   padding: 0 0.5rem;
@@ -356,17 +359,18 @@ label {
 
   /* * Skills */
 
+  .section-two__cards {
+    padding: 0;
+  }
+
   .card {
-    width: 60%;
+    width: 65%;
     margin: 0 auto;
     display: flex;
     align-items: center;
-    justify-content: space-evenly;
-    padding: 1em 0.5em;
-  }
-
-  svg {
-    width: 70px;
+    justify-content: start;
+    gap: 1rem;
+    padding: 0.5em;
   }
 
   /* * Portfolio */
@@ -382,7 +386,7 @@ label {
   }
 
   section:not(section.hero) {
-    padding: 4em 0;
+    padding: 6em 0;
   }
 
   /* * Section - Hero */
@@ -397,16 +401,15 @@ label {
 
   /* * Section - Skills */
 
-  .card {
-    display: block;
-    width: 65%;
-    padding: 1em 0;
-    margin: 0;
+  .section-two__cards {
+    padding: 0 2em;
   }
 
-  .card > p {
-    width: fit-content;
-    margin: 0 auto;
+  .card {
+    width: max-content;
+    padding: 1em;
+    margin: 0;
+    justify-content: center;
   }
 
   .section-two__cards {
@@ -420,7 +423,7 @@ label {
   }
 
   .card + .card {
-    margin-top: 0;
+    margin-top: 2rem;
   }
 
   /* * Section - Portfolio */
@@ -524,9 +527,22 @@ label {
 @media (min-width: 2130px) {
   /* * SECTION - SKILLS */
 
-  .card:nth-of-type(odd) {
-    justify-self: auto;
+  .section-two__cards {
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
   }
+
+  .card {
+    display: block;
+    width: 40%;
+  }
+  /* 
+  .card:nth-of-type(odd) {
+    justify-self: end;
+  }
+
+  .card:nth-of-type(even) {
+    justify-self: start;
+  } */
 
   /* * Section - contacts */
 
